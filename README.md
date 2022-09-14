@@ -129,11 +129,10 @@ Average %usr was 27.45, average %sys was 7.45 and average %idle was 42.16 while 
 
 ## Reference
 <ul>
-  <li>tpcc-mysql: Quick Start Guide, Github Repository, https://github.com/meeeejin/SWE3033-F2021/blob/main/week-1/reference/tpcc-mysql-install-guide.md</li>
   <li>Percona Lab : tpcc-mysql, Github repository, https://github.com/Percona-Lab/tpcc-mysql</li>
+  <li>tpcc-mysql: Quick Start Guide, Github Repository, https://github.com/meeeejin/SWE3033-F2021/blob/main/week-1/reference/tpcc-mysql-install-guide.md</li>
   <li>SWE3033_41, Sungkyunkwan University, Colleg of Computing</li>
 </ul>
 
-<li></li>
 <i></i>
 <b></b>
