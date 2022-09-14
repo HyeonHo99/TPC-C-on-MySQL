@@ -79,7 +79,21 @@ $ ./tpcc_start -h 127.0.0.1 -S /tmp/mysql.sock -d tpcc -u root -p "yourPassword"
   <li>Transactions per minute Count (TpmC) : 13683.75</li>
   <img src="/1/tpcc-run-results.png" width="400" heigh="300"></img>
   <li>Throughput changes over time (time interval: 10seconds)</li>
-  <img src="/1/trx_graph.png" width="450" heigh="450"></img>
+  <img src="/1/trx_graph.png" width="450" heigh="450"></img><br>
+  
+   ```consle
+  10, trx: 12920, 95%: 9.483, 99%: 18.738, max_rt: 213.169, 12919|98.778, 1292|101.096, 1293|443.955, 1293|670.842
+  20, trx: 12666, 95%: 7.074, 99%: 15.578, max_rt: 53.733, 12668|50.420, 1267|35.846, 1266|58.292, 1267|37.421
+  30, trx: 13269, 95%: 6.806, 99%: 13.126, max_rt: 41.425, 13267|27.968, 1327|32.242, 1327|40.529, 1327|29.580
+  ```
+  10 - indicates the seconds from the start of the benchmark <br>
+  'trx' - indicates New Order transactinos executed during the given interval (in this case, for the previous 10 seconds)<br>
+  '95%' - refers to the 95% Response time of New Order transactions per given interval <br>
+  '99%' - refers to the 99% Response time of New Order transactions per given interval <br>
+  'max_rt' - refers to the Maximum Response time of New Order transactions per given interval <br>
+  rest columns can be ignored<br>
+  <li>Response Time Change Visualization</li>
+  <img src="/1/trx_graph.png" width="450" heigh="450"></img><br>
 </ul>
 
 #### Sysmtem Performance : Disk I/O
