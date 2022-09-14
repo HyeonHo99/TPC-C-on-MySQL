@@ -1,7 +1,7 @@
 # TPC-C-on-MySQL
 Analyis on MySQL DBMS with TPC-C Benchmark
 
-## 1. TPC-C and Benchmarking
+## 0. TPC-C and Benchmarking
 ##### TPC
 <ul>
   <li> TPC : Transaction Processing Performance Council</li>
@@ -47,7 +47,7 @@ Analyis on MySQL DBMS with TPC-C Benchmark
   :+1: For detailed and friendly installation process, visit [tpcc-mysql: Quick Start Guide](https://github.com/meeeejin/SWE3033-F2021/blob/main/week-1/reference/tpcc-mysql-install-guide.md)
 </ul>
 
-## 2. Run the TPC-C Benchmark
+## 1. Run the TPC-C Benchmark
 While running the TPC-C benchmark on MySQL, analyze results, performance metrics and also monitor system performance
 <ol>
   <li><b>Set buffer pool size</b> in my.cnf (mysql configuration file): Here we set, the buffer pool size as 10% of TPC-C database size, so 200M</li>
@@ -122,6 +122,10 @@ Here we note three values : <b>%usr, %sys, %idle</b>
   <li>%sys : the percentage of CPU utilization that occurred while executing at the system level (kernel)</li>
   <li>%idle : the percentage of time that the CPU or CPUs were idle and the system did not have an outstanding disk I/O request</li>
 </ul>
+Average %usr was 27.45, average %sys was 7.45 and average %idle was 42.16 while TPC-C benchmark run.
+
+
+## 2. Buffer Size and Buffer Hit/Miss
 
 ## Reference
 <ul>
