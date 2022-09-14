@@ -75,14 +75,20 @@ $ ./tpcc_start -h 127.0.0.1 -S /tmp/mysql.sock -d tpcc -u root -p "yourPassword"
 
 ### Results
 #### TpmC and Throughput
-Transactions per minute Count (TpmC) : 13683.75
-<img></img>
+<ul>
+  <li>Transactions per minute Count (TpmC) : 13683.75</li>
+  <img src="/1/tpcc-run-results.png" width="400" heigh="300"></img>
+  <li>Throughput changes over time (time interval: 10seconds)</li>
+  <img src="" width="400" heigh="300"></img>
+</ul>
+
 #### Sysmtem Performance : Disk I/O
 #### Sysmtem Performance : CPU Utility
 
 ## Reference
 <ul>
   <li>tpcc-mysql: Quick Start Guide, Github Repository, https://github.com/meeeejin/SWE3033-F2021/blob/main/week-1/reference/tpcc-mysql-install-guide.md</li>
+  <li>Percona Lab : tpcc-mysql, Github repository, https://github.com/Percona-Lab/tpcc-mysql</li>
   <li>SWE3033_41, Sungkyunkwan University, Colleg of Computing</li>
 </ul>
 
