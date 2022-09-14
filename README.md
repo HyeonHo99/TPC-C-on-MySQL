@@ -120,7 +120,7 @@ Here we note three values : <b>%usr, %sys, %idle</b>
 <ul>
   <li>%usr : the percentage of CPU utilization that occurred while executing at the user level (application)</li>
   <li>%sys : the percentage of CPU utilization that occurred while executing at the system level (kernel)</li>
-  <li>%%idle : the percentage of time that the CPU or CPUs were idle and the system did not have an outstanding disk I/O request</li>
+  <li>%idle : the percentage of time that the CPU or CPUs were idle and the system did not have an outstanding disk I/O request</li>
 </ul>
 
 ## Reference
