@@ -50,7 +50,7 @@ Analyis on MySQL DBMS with TPC-C Benchmark
 ## 2. Run the TPC-C Benchmark
 While running the TPC-C benchmark on MySQL, analyze results, performance metrics and also monitor system performance
 <ol>
-  <li>Set buffer pool size in my.cnf (mysql configuration file): Here we set, the buffer pool size as 10% of TPC-C database size, so 200M</li>
+  <li><b>Set buffer pool size</b> in my.cnf (mysql configuration file): Here we set, the buffer pool size as 10% of TPC-C database size, so 200M</li>
   
   ```consle
   $ vi /path/to/my.cnf
@@ -59,14 +59,14 @@ innodb_buffer_pool_size=200M
 ...
   ```
   
-  <li>Start MySQL server</li>
+  <li><b>Start MySQL server</b></li>
   
   ```consle
   $ vi /path/to/my.cnf
 $ ./bin/mysqld_safe --defaults-file=/path/to/my.cnf
   ```
   
-  <li>Run TPC-C</li>
+  <li><b>Run TPC-C</b></li>
   
   ```consle
 $ ./tpcc_start -h 127.0.0.1 -S /tmp/mysql.sock -d tpcc -u root -p "yourPassword" -w 20 -c 8 -r 10 -l 1200 | tee tpcc-result.txt  
