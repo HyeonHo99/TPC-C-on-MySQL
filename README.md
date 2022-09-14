@@ -97,7 +97,29 @@ $ ./tpcc_start -h 127.0.0.1 -S /tmp/mysql.sock -d tpcc -u root -p "yourPassword"
 </ul>
 
 #### (2) Sysmtem Performance : Disk I/O
+Measured with iostat
+
+```consle
+  $ iostat -mx 1
+```
+Here we note two values : <b>%r/s, %w/s</b>
+<ul>
+  <li>%r/s :</li>
+  <li>%w/s :</li>
+</ul>
+
 #### (3) Sysmtem Performance : CPU Utility
+Measured with mpstat
+
+```consle
+$ mpstat -P ALL 1
+```
+Here we note three values : <b>%usr, %sys, %idle</b>
+<ul>
+  <li>%usr :</li>
+  <li>%sys :</li>
+  <li>%%idle :</li>
+</ul>
 
 ## Reference
 <ul>
