@@ -1,7 +1,7 @@
 # TPC-C-on-MySQL
 Analyis on MySQL DBMS with TPC-C Benchmark
 
-## TPC-C and Benchmarking
+## 1. TPC-C and Benchmarking
 ##### TPC
 <ul>
   <li> TPC : Transaction Processing Performance Council</li>
@@ -47,7 +47,7 @@ Analyis on MySQL DBMS with TPC-C Benchmark
   :+1: For detailed and friendly installation process, visit [tpcc-mysql: Quick Start Guide](https://github.com/meeeejin/SWE3033-F2021/blob/main/week-1/reference/tpcc-mysql-install-guide.md)
 </ul>
 
-## 1. Run the TPC-C Benchmark
+## 2. Run the TPC-C Benchmark
 While running the TPC-C benchmark on MySQL, analyze results, performance metrics and also monitor system performance
 <ol>
   <li>Set buffer pool size in my.cnf (mysql configuration file): Here we set, the buffer pool size as 10% of TPC-C database size, so 200M</li>
