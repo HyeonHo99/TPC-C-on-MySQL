@@ -104,9 +104,11 @@ Measured with iostat
 ```
 Here we note two values : <b>%r/s, %w/s</b>
 <ul>
-  <li>%r/s :</li>
-  <li>%w/s :</li>
+  <li>%r/s : the number of read requests that were issued to the (read) device per second</li>
+  <li>%w/s : the number of write requests that were issued to the (read) device per second</li>
 </ul>
+Average r/s was 7068 meanwhile average w/s was 3900. <br>
+Thus, average raito of read/write (from/on Disk) was 64.43 : 35.56, which approximates 65:35 as expected<br>
 
 #### (3) Sysmtem Performance : CPU Utility
 Measured with mpstat
@@ -116,9 +118,9 @@ $ mpstat -P ALL 1
 ```
 Here we note three values : <b>%usr, %sys, %idle</b>
 <ul>
-  <li>%usr :</li>
-  <li>%sys :</li>
-  <li>%%idle :</li>
+  <li>%usr : the percentage of CPU utilization that occurred while executing at the user level (application)</li>
+  <li>%sys : the percentage of CPU utilization that occurred while executing at the system level (kernel)</li>
+  <li>%%idle : the percentage of time that the CPU or CPUs were idle and the system did not have an outstanding disk I/O request</li>
 </ul>
 
 ## Reference
