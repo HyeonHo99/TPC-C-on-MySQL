@@ -79,7 +79,7 @@ $ ./tpcc_start -h 127.0.0.1 -S /tmp/mysql.sock -d tpcc -u root -p "yourPassword"
   <li>Transactions per minute Count (TpmC) : 13683.75</li>
   <img src="/1/tpcc-run-results.png" width="400" heigh="300"></img>
   <li>Throughput changes over time (time interval: 10seconds)</li>
-  <img src="" width="400" heigh="300"></img>
+  <img src="/1/trx_graph.png" width="450" heigh="450"></img>
 </ul>
 
 #### Sysmtem Performance : Disk I/O
