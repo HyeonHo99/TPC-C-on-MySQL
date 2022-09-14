@@ -93,7 +93,7 @@ $ ./tpcc_start -h 127.0.0.1 -S /tmp/mysql.sock -d tpcc -u root -p "yourPassword"
   'max_rt' - refers to the Maximum Response time of New Order transactions per given interval <br>
   rest columns can be ignored<br>
   <li>Response Time Change Visualization</li>
-  <img src="/1/trx_graph.png" width="450" heigh="450"></img><br>
+  <img src="/1/rt_graph.png" width="450" heigh="450"></img><br>
 </ul>
 
 #### Sysmtem Performance : Disk I/O
