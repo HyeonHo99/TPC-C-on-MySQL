@@ -76,7 +76,7 @@ $ ./tpcc_start -h 127.0.0.1 -S /tmp/mysql.sock -d tpcc -u root -p "yourPassword"
 ### Results
 #### TpmC and Throughput
 #### Sysmtem Performance : Disk I/O
-#### Sysmtem Performance : CPU utility
+#### Sysmtem Performance : CPU Utility
 
 ## Reference
 <ul>
