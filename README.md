@@ -125,7 +125,15 @@ Here we note three values : <b>%usr, %sys, %idle</b>
 Average %usr was 27.45, average %sys was 7.45 and average %idle was 42.16 while TPC-C benchmark run.
 
 
-## 2. Buffer Size and Buffer Hit/Miss
+## 2. Measure MySQL Performance by Varying the Buffer Size
+### Database I/O Architecture
+<ol>
+  Every database shares the below I/O architecture
+  <li>SQL statements are translated into Logical Page Read/Write operations</li>
+  <li>If requested page exists in database buffer(buffer pool), physical page read/write operations occur immediately <b>[Buffer Hit]</b></li>
+  <li>If the page is not in in database buffer, it is pulled onto database buffer first, then the physical operations occur <b>[Buffer Miss]</b></li>
+</ol>
+
 
 ## Reference
 <ul>
