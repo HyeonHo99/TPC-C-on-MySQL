@@ -172,11 +172,13 @@ Average %usr was 27.45, average %sys was 7.45 and average %idle was 42.16 while 
 - We set buffer pool size to 10%, 20%, 30%, 40%, 50% of TPC-C database size. (Respectively, 200MB, 400MB, 600MB, 800MB 1GB)
 
 #### Results: Buffer Hit Ratio Comparison
-- The bigger the bufffer pool size, the higher the buffer hit ratio (as expected)
-
+- The bigger the bufffer pool size, the higher the buffer hit ratio (as expected)<br>
+<img src="/2/buffer-hit-comparison.png" width="300" heigh="300"></img><br>
 
 #### Results: TpmC and TPC-C Throughput Comparison
-- Bgger the buffer pool sizes resulted in better TpmC and throughput
+- Bgger the buffer pool sizes resulted in better TpmC and throughput<br>
+<img src="/2/tpmc-comparison.png" width="300" heigh="300"></img>
+<img src="/2/throughput-comparison.png" width="300" heigh="300"></img><br>
 
 ## Reference
 <ul>
