@@ -176,7 +176,7 @@ Average %usr was 27.45, average %sys was 7.45 and average %idle was 42.16 while 
 <img src="/2/buffer-hit-comparison.png" width="300" heigh="300"></img><br>
 
 #### Results: TpmC and TPC-C Throughput Comparison
-- Bgger the buffer pool sizes resulted in better TpmC and throughput<br>
+- Bgger the buffer pool sizes resulted in better TpmC and throughput <br>
 <img src="/2/tpmc-comparison.png" width="350" heigh="350"></img>
 <img src="/2/throughput-comparison.png" width="350" heigh="350"></img><br>
 
