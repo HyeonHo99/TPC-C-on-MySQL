@@ -167,6 +167,17 @@ Average %usr was 27.45, average %sys was 7.45 and average %idle was 42.16 while 
 - To make sure frequently accessed pages reamin in the buffer pool (they usually reside in new sub-list)<br>
 <img src="/2/LRU-list.png" width="300" heigh="650"></img><br>
 
+### Measure Buffer Hit/Miss Ratio on different Buffer Pool Sizes
+- Buffer pool size can be modified by changing values for "innodb_buffer_pool_size" in MySQL Configuration file (my.cnf)
+- We set buffer pool size to 10%, 20%, 30%, 40%, 50% of TPC-C database size. (Respectively, 200MB, 400MB, 600MB, 800MB 1GB)
+
+#### Results: Buffer Hit Ratio Comparison
+- The bigger the bufffer pool size, the higher the buffer hit ratio (as expected)
+
+
+#### Results: TpmC and TPC-C Throughput Comparison
+- Bgger the buffer pool sizes resulted in better TpmC and throughput
+
 ## Reference
 <ul>
   <li>Percona Lab : tpcc-mysql, Github repository, https://github.com/Percona-Lab/tpcc-mysql</li>
