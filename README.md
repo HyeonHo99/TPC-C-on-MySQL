@@ -150,8 +150,22 @@ Average %usr was 27.45, average %sys was 7.45 and average %idle was 42.16 while 
 </ul>
 
 ### Buffer Pool LRU Algorithm (codes in 'buf/buf0lru.cc')
-
-
+- MySQL mangages the buffer pool with <b>two sub-lists using a variation of LRU</b>
+- Mechanism
+  <ol>
+    <li>When a page is initially accessed to buffer pool, it is inserted at the midpoint</li>
+    <li>
+      <ul>Page Hits in the
+          <li>Old sub-list: makes the page young (move the page to the head of the new sub-list)</li>
+          <li>New sub-list: moves the page to the head of the new sub-list only if they are a certain distance from the head</li>
+      </ul>
+    </li>
+    <li>Least recently used pages are moved to the tail of the list and are evicted</li>
+  </ol>
+- Why keeps two sub-lists? => To be resistant to buffer pool scan (Large scans, Read-ahead)
+- To minimize the amount of data that is brought into the buffer pool and never accessed again (they reside in old sub-list and eventually evicted quick)
+- To make sure frequently accessed pages reamin in the buffer pool (they usually reside in new sub-list)<br>
+<img src="/2/LRU-list.png" width="300" heigh="650"></img><br>
 
 ## Reference
 <ul>
