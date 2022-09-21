@@ -131,9 +131,26 @@ Average %usr was 27.45, average %sys was 7.45 and average %idle was 42.16 while 
   Every database shares the below I/O architecture
   <li>SQL statements are translated into Logical Page Read/Write operations</li>
   <li>If requested page exists in database buffer(buffer pool), physical page read/write operations occur immediately <b>[Buffer Hit]</b></li>
-  <li>If the page is not in in database buffer, it is pulled onto database buffer first, then the physical operations occur <b>[Buffer Miss]</b></li><br>
-  <img src="/2/db-architecture.png" width="450" heigh="450"></img><br>
+  <li>If the page is not in in database buffer, it is pulled onto database buffer first, then the physical operations occur <b>[Buffer Miss]</b></li>
+  In case of Buffer Miss, if there's no empty frame in buffer pool, a victim frame should be chosen, in our case, according to LRU policy. <br>
+  If the victim frame is clean (not modified), it is simply discarded.<br>
+  If the victim frame is dirty (modified/updated), it is written back into Disk storage first, then erased.<br>
+  <img src="/2/db-architecture.png" width="300" heigh="400"></img><br>
 </ol>
+
+### Buffer Replacement Policy
+<ul>
+  <li>A victim buffer frame is chosen for replacement by a replacement policy</li>
+  <li>Types of replacement policies : Random, FIFO, LRU, MRU, Clock,...</li>
+  <li>Better replacement policy result in a higher buffer hit ratio and buffer hit ratio has a huge impact on DBMS performance time</li>
+  <li>One Buffer miss usually makes one or two more disk I/O</li>
+  <li>Disk access time = DRAM access time * 1000</li>
+  <li>Buffer Hit Ratio = number of buffer hits / number of page requests to buffer cache</li>
+  <li>Buffer Pool : area in main memory where InnoDB caches data as it is accessed</li>
+</ul>
+
+### Buffer Pool LRU Algorithm (codes in 'buf/buf0lru.cc')
+
 
 
 ## Reference
