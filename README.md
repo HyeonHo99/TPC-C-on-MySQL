@@ -257,9 +257,10 @@ I/O sum[0]:cur[0], unzip sum[0]:cur[0]
   ```
   
 - Above timeout command sends TERM signal after 1200 seconds to iostat command. If this doesn't terminate the iostat command, timeout sends KILL signal after 1 second. (KILL signal can't be blocked)
-- We examine 'r/s' and 'w/s' column, which respectively means 'Disk Reads per Second' and 'Disk Writes per Second'.
+- We examine 'r/s' and 'w/s' column, which respectively means 'Disk Reads per Second' and 'Disk Writes per Second'.<br>
 <img src="/2/read-write-comparison.png" width="350" heigh="350"></img><br>
-
+- We note that as buffer size increases, <b>the number of both I/O decreases</b>. It can be implied that as the Main Memory (buffer cache) gets big enough to contain most pages, the need to visit Disk Storage decreases.
+- We also note that with increasing buffer pool size, <b>ratio of writes to reads increases</b>. ISame interpretation from above can be implied
   
 
 ## Reference
