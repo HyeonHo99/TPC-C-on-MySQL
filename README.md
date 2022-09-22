@@ -250,6 +250,17 @@ I/O sum[0]:cur[0], unzip sum[0]:cur[0]
 <img src="/2/throughput-comparison.png" width="350" heigh="350"></img><br>
 
 ### Results: Disk Read / Disk Write Ration Comparison
+- We leverage Disk I/O monitoring tool, 'iostat'
+
+ ```consle
+  $ timeout -k 1 1200 iostat -mx 1
+  ```
+  
+- Above timeout command sends TERM signal after 1200 seconds to iostat command. If this doesn't terminate the iostat command, timeout sends KILL signal after 1 second. (KILL signal can't be blocked)
+- We examine 'r/s' and 'w/s' column, which respectively means 'Disk Reads per Second' and 'Disk Writes per Second'.
+<img src="/2/read-write-comparison.png" width="350" heigh="350"></img><br>
+
+  
 
 ## Reference
 <ul>
