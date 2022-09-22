@@ -170,9 +170,78 @@ Average %usr was 27.45, average %sys was 7.45 and average %idle was 42.16 while 
 ### Measure Buffer Hit/Miss Ratio on different Buffer Pool Sizes
 - Buffer pool size can be modified by changing values for "innodb_buffer_pool_size" in MySQL Configuration file (my.cnf)
 - We set buffer pool size to 10%, 20%, 30%, 40%, 50% of TPC-C database size. (Respectively, 200MB, 400MB, 600MB, 800MB 1GB)
+- Then conduct experiment (Run TPC-C benchmark)
+
+<ol>
+  <li>Before starting MySQL server, modify buffer pool size to 10%(then, 20%, 30%, 40%, 50%) of your TPC-C database size<br>
+  Here we set database size as 2GB (= 20 warehouses)<br>
+  In this case, change the value of 'innodb_buf_pool_size' in my.cnf (mysql configuration file) to 200M (200MB)</li><br>
+  
+  ```consle
+  $ vi /path/to/my.cnf
+...
+innodb_buffer_pool_size=200M
+...
+  ```
+  
+  <li>Start MySQL server<br></li>
+  
+  ```consle
+  $ ./bin/mysqld_safe --defaults-file=/path/to/my.cnf
+  ```
+  
+  <li>Run the TPC-C benchmark<br></li>
+  
+  ```consle
+  $ ./tpcc_start -h 127.0.0.1 -S /tmp/mysql.sock -d tpcc -u root -p "yourPassword" -w 20 -c 8 -r 10 -l 1200 | tee tpcc-result.txt
+  ```
+  
+  <li>Keep track of buffer hit/miss ratio <br></li>
+  Start MySQL terminal and use 'SHOW ENGINE INNODB STATUS' command
+  
+  
+  ```consle
+  $ ./bin/mysql -uroot -pyourPassword
+  Welcome to the MySQL monitor.  Commands end with ; or \g.Your MySQL connection id is 8Server version: 8.0.15 Source distribution
+Copyright (c) 2000, 2019, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> show engine innodb status;
+...
+----------------------
+BUFFER POOL AND MEMORY
+----------------------
+Total large memory allocated 2353004544
+Dictionary memory allocated 373557
+Buffer pool size   524288
+Free buffers       0
+Database pages     524287
+Old database pages 193695
+Modified db pages  0
+Pending reads      1
+Pending writes: LRU 0, flush list 0, single page 0
+Pages made young 0, not young 36985
+0.00 youngs/s, 2465.50 non-youngs/s
+Pages read 576950, created 160, written 177
+38431.37 reads/s, 0.13 creates/s, 11.13 writes/s
+Buffer pool hit rate 986 / 1000, young-making rate 0 / 1000 not 63 / 1000
+Pages read ahead 0.00/s, evicted without access 3444.10/s, Random read ahead 0.00/s
+LRU len: 524287, unzip_LRU len: 0
+I/O sum[0]:cur[0], unzip sum[0]:cur[0]
+...
+  ```
+  
+</ol>
 
 #### Results: Buffer Hit Ratio Comparison
-- The bigger the bufffer pool size, the higher the buffer hit ratio (as expected)<br>
+- We measure 'buffer hit rate' with above command, two times: first in the beginning of the TPC-C run and in the end.
+- Then, use average of two values as the respresentative hit ration.
+- Bigger buffer pool size resulted in higher the buffer hit ratio (obviosuly)<br>
 <img src="/2/buffer-hit-comparison.png" width="300" heigh="300"></img><br>
 
 #### Results: TpmC and TPC-C Throughput Comparison
