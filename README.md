@@ -245,7 +245,7 @@ I/O sum[0]:cur[0], unzip sum[0]:cur[0]
 <img src="/2/buffer-hit-comparison.png" width="300" heigh="300"></img><br>
 
 #### Results: TpmC and TPC-C Throughput Comparison
-- <b> Again, bigger buffer pool size resulted in better TpmC and better throughput <br>
+- <b> Again, bigger buffer pool size resulted in better TpmC and better throughput</b> <br>
 <img src="/2/tpmc.png" width="350" heigh="350"></img>
 <img src="/2/throughput-comparison.png" width="350" heigh="350"></img><br>
 
