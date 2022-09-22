@@ -249,6 +249,8 @@ I/O sum[0]:cur[0], unzip sum[0]:cur[0]
 <img src="/2/tpmc.png" width="350" heigh="350"></img>
 <img src="/2/throughput-comparison.png" width="350" heigh="350"></img><br>
 
+### Results: Disk Read / Disk Write Ration Comparison
+
 ## Reference
 <ul>
   <li>Percona Lab : tpcc-mysql, Github repository, https://github.com/Percona-Lab/tpcc-mysql</li>
