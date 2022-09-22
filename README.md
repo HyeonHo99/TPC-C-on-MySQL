@@ -197,7 +197,7 @@ innodb_buffer_pool_size=200M
   ```
   
   <li>Keep track of buffer hit/miss ratio <br></li>
-  Start MySQL terminal and use 'SHOW ENGINE INNODB STATUS' command
+  Open MySQL terminal and use 'SHOW ENGINE INNODB STATUS' command
   
   
   ```consle
@@ -241,12 +241,12 @@ I/O sum[0]:cur[0], unzip sum[0]:cur[0]
 #### Results: Buffer Hit Ratio Comparison
 - We measure 'buffer hit rate' with above command, two times: first in the beginning of the TPC-C run and in the end.
 - Then, use average of two values as the respresentative hit ration.
-- Bigger buffer pool size resulted in higher the buffer hit ratio (obviosuly)<br>
+- <b>Bigger buffer pool size resulted in higher the buffer hit ratio</b> (as expected)<br>
 <img src="/2/buffer-hit-comparison.png" width="300" heigh="300"></img><br>
 
 #### Results: TpmC and TPC-C Throughput Comparison
 - Bgger the buffer pool sizes resulted in better TpmC and throughput <br>
-<img src="/2/tpmc-comparison.png" width="350" heigh="350"></img>
+<img src="/2/tpmc.png" width="350" heigh="350"></img>
 <img src="/2/throughput-comparison.png" width="350" heigh="350"></img><br>
 
 ## Reference
