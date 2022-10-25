@@ -267,7 +267,7 @@ I/O sum[0]:cur[0], unzip sum[0]:cur[0]
 <ul>
   <li>Percona Lab : tpcc-mysql, Github repository, https://github.com/Percona-Lab/tpcc-mysql</li>
   <li>tpcc-mysql: Quick Start Guide, Github Repository, https://github.com/meeeejin/SWE3033-F2021/blob/main/week-1/reference/tpcc-mysql-install-guide.md</li>
-  <li>SWE3033_41, Sungkyunkwan University, College of Computing</li>
+  <li>Sungkyunkwan University, College of Computing</li>
 </ul>
 
 <i></i>
